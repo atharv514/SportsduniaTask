@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Center the entire page content using flexbox */
+.page-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center; 
+  align-items: center;     
+  flex-direction: column;  
+  min-height: 100vh;       
+  padding: 20px;           
+}
+
+/* Constrain the content width */
+.content {
+  width: 100%;
+  max-width: 1200px;       
+  margin: 0 auto;          
+  padding: 0 20px;         
+}
+
+/* Styling the search bar */
+.search-bar {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px; 
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin: 20px 0;
+  border: 1px solid #ddd; 
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd; 
+}
+
+/* Header styling */
+th {
+  background-color: #66cab1; 
+  font-weight: bold;
+}
+
+/* Apply a uniform light shade for all non-featured rows */
+tr.non-featured {
+  background-color: #f9f9f9; 
+}
+
+/* Featured row style */
+tr.featured {
+  background-color: #e0f7fa; 
+}
+
+/* Badge for featured colleges */
+.featured-badge {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 14px;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; 
+  margin-top: 10px;
+}
+
+
+/* Button styling */
+button {
+  margin-right: 5px;
+  padding: 8px 12px;
+  background-color: #ff6600;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #ff4500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  /* Make the table responsive on smaller screens */
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.compare-checkbox {
+  display: flex;
+  align-items: center;  
+}
+
+.compare-checkbox input {
+  margin-right: 5px; 
 }
